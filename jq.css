@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+*{margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+text-decoration: none;}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{width: 100%;}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 6%;
+    color: #f7f7f3;
+    box-shadow: .3rem .5rem .5rem #020200;
+     background-color:#fa8620; 
+    position: fixed;
+    top: 0; left: 0;right: 0;
+    z-index: 1000;
+}
+.main-menu a{
+    font-size: 2.2rem;
+color: #fff;
+margin-right: .9rem;
+}
+.full-menu{
+    position:absolute;
+    top:100%; left: 0;right: 0;
+    width: 80%;
+    height: auto;
+ margin: auto;
+  padding: 20px 0 10px 0;
+    background-color: #2b0d5c; 
+   transform: scaleY(0); 
+  transform-origin: top ; 
+  transition: .3s;  
+}
+.menu-container{
+    position: relative;
+    max-width: 96%;
+    display: flex; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+  .full-menu.active{
+    transform: scaleY(1);
+}  
+.menu-col{
+    width: 33%;
+}
+ .menu-col ul{
+    list-style: none;
+ }
+ .menu-col ul li{
+    padding:5px 0px 0px 15px;
+ }
+ .menu-col ul li a{
+    font-size: 20px;
+    font-weight: 300;
+    color: #8bbefa;
+ }
+ .menu-col ul li ul{
+    padding: 5px  0px;
+    margin: 5px 0px 10px;
+    list-style: circle;
+ }
+
+  .menu-col ul li ul li a{
+    color: #e5e6e8;
+ }
+ #close-btn{
+    float: right;
+    font-size: 23px;
+    margin-right: 5px;
+    cursor: pointer;
+ } 
+
+.header-right{
+    display: flex;
+    align-items:flex-end;
+}   
+.header-right #skip a{
+    color: #f7f7f3;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header-right ul{
+    margin-right: .1rem;
+}
+ .header-right  ul li{
+     display:inline-block; 
+    list-style: none ;} 
+.header-right ul li a,i{
+     margin-left: 2px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #ffbd5f;
+    color: #faefef;
+    font-size: 18px;
+}
+.search-area{
+     display: flex;
+    align-items: center; 
+margin-left: .8rem;
+}
+.search-area input{ 
+    width: 100px;
+}
+.search-area label{
+    position: relative;
+    right: 2rem;
+    font-size:1.5rem;
+    color: #020200;
+} 
+.language-area label{
+    font-size: 1.5rem;
+}
+h1 {
+    position: absolute;
+   top: 70px; left: 3%;
+   }
+h1 img{
+height: auto;
+max-width: 100%;
+   }
+h1 span{
+    font-size: 34px;
+    left: 28%;
+position: absolute;
+top: 30px;
+    text-shadow: 0 0 5px rgb(247, 243, 243);
+   }
+   
+.slide-home .slide{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    min-height:50rem;
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+    display: none;
+   }
+.slide h2{
+   text-align: center;
+width: 50rem;
+font-size: 2rem;
+font-weight: bold;
+color: #fff;
+    background: rgba(12, 12, 12, 0.336);
+}
+.slide.active{
+    display: flex;
+}
+#next-slide ,
+#pre-slide{
+       position: absolute;
+      top: 45%;
+      text-align: center;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      border-radius: 20%;
+      font-size: 30px;
+      color: #fff;
+      background: #fa862062;
+ }
+#pre-slide{
+      left: 20px;
+    }
+#next-slide{
+  right: 20px;
+    }
+ #next-slide:hover,
+  #pre-slide:hover{
+    background-color: #fa8620;
+}
+
+.news{
+  padding-bottom: 10px;
+    background: #E5E6E8
+}
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+font-size: 3rem;
+font-weight: 900;
+padding: 2rem;
+color: #0c0c0c;
+}
+.news #container{
+max-width: 96%;
+margin: auto ;
+ display: grid;
+ gap: 1rem;
+ grid-template-columns: repeat(2,1fr); 
+}
+#container .news{
+    animation: animatecontainer 1.5s linear .5s backwards;
+ }
+ @keyframes animatecontainer{
+    0%{
+        transform: translateX(-100%);
+    }
+} 
+.news-img{
+    width: 38%;
+    float: left;
+}
+#container .news img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+#container .news .news-content{
+    width: 58%;
+    float: right;
+    padding:0rem  2rem;
+}
+#container .news .news-content h3{
+    font-size: 18px;
+    font-weight: bold;
+     margin-block:0 10px; 
+}
+.news p{
+    font-size: 16px;
+    color:#656973;
+    }
+    .bton {
+  margin-block: 20px;
+        text-align: center;
+        font-size: 22px;
+     
+     }
+     .bton a{
+        color: #0a0a0a;
+        width: 150px;
+        height: 30px;
+        line-height: 40px;
+       padding: 5px 30px;
+        background-color: #ffcc00;
+     }
+ 
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.gallery .block{
+ position: relative;
+} 
+.block img{
+ opacity: 0.8;
+  width: 100%;
+    height: 100%;
+}
+
+.galry-content{  position: absolute;
+    bottom: 50px;
+     left: 15px; 
+    width: 100%;}
+.block  .bttn-gallery {
+    width: 15rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .8rem;
+    background-color: #ffcc00;
+    color: #0e0d0d;
+    text-align: center;
+display: inline-block;
+ }     
+
+  .info-blocks {
+display: grid;
+grid-template-columns: 38% auto 38%;
+border-bottom: 2px solid black;
+} 
+.info-blocks  .info-block1{
+height: 80rem;
+background: url(https://www.pmindia.gov.in/wp-content/themes/pmindia2015/images/bg-block1.jpg) no-repeat;
+}
+ .info-content{
+    padding: 4rem 3.5rem;
+    color: #0a0a0a;
+}
+.info-content h3{
+    font-size: 3rem;
+  font-weight: 800;
+    width: 35rem;
+}
+.info-content p{
+font-size: 1.5rem;
+font-weight: 600;
+padding: 3rem 0;
+line-height: 200%;
+}
+.btn{
+    background: #37adff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5em;
+  
+}
+.info-blocks  .info-block2{
+    height: 80rem;
+    background-color: #020200;
+}
+.top{
+     padding: 30px; 
+    background-color: brown;
+}
+.top-img img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.info-block2 .middle{
+    background-color: rgb(128, 37, 37);
+   padding: 1.5rem 4rem; 
+   color: #fff;
+}
+.info-block2 .middle h3{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: .5rem;
+}
+.info-block2 .middle p{
+    font-size: 1.5rem;
+    padding-bottom: .8rem;
+    line-height: 150%;
+}
+.info-block2 .bottom{
+    color: #fff;
+    padding: 2.5rem 3rem;
+}
+.bottom h5{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom:1.5rem ;
+}
+.bottom .pm-gallery{
+ display: grid;
+  gap:0 .5rem;
+  grid-template-columns: repeat(auto-fit,minmax(3.5rem,1fr));
+}
+.bottom .pm-gallery .pm-pics img{
+    width: 100%;
+    height: auto;
+   
+}
+.pm-pics img:hover{
+    border: 2px solid #ffA423;
+}
+.info-blocks  .info-block3{
+  height: 80rem;
+ background: url(https://www.pmindia.gov.in/wp-content/themes/pmindia2015/images/bg-block3.jpg);} 
+
+ .intract{
+    background-color: #0d315c;
+ padding:  20px;
+ overflow: hidden;
+ }
+ .intract h2{
+   text-align: center; 
+  font-size: 40px;
+ color: #fff;
+ }
+   .intract .box1{
+ float: left;
+ width: 50%;
+ animation:incontant .4s linear .6s backwards;
+   }
+   @keyframes incontant {
+     0%{
+       transform: translateX(-100%);
+     }
+   }
+ .intract .box1 a{
+ text-align: center;
+ display: inline-block;
+  float: right;
+  color: #fff;
+ padding: 20px;
+ }
+ .intract h4{
+     font-size: 28px;
+     padding: 6%;
+ }
+ .intract .box2{
+ float: right;
+ width: 50%;
+ animation:boxcontant .4s linear .6s backwards;
+ }
+ @keyframes boxcontant {
+     0%{
+       transform: translateX(100%);
+     }
+   }
+ .intract .box2 a{
+ text-align: center;
+ display: inline-block;
+  color: #fff;
+ padding: 20px;
+ }
+ 
+ .footer-wrap{
+    background: #393c42;
+ }
+.footer{
+    width: 95%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));  
+   
+}
+.footer-img img{
+width: 100%;
+height: 100%;
+
+}
+.footer .footer-img a i{
+    position: relative;
+    bottom: 100%;
+    left: 10px;
+    color: #fff;
+}
+.footer .footer-img h5{
+    position: relative;
+    bottom: 38%; left: 10px;
+    font-size: 19px;
+    font-weight: bolder;
+    color: rgb(250, 237, 237);
+    text-shadow: rgb(3 3 3) 0px 0px 3px;
+}
+.footer .footer-img h4{
+    font-size: 32px;
+    padding: 15px;
+}
+.footer .footer-img span{
+    display: block;
+}
+ .footer2{
+    background-color:  #111111;
+}
+.container{
+display: flex;
+flex-wrap: wrap;
+max-width: 90%;
+margin: auto;
+
+}
+.col1{text-align: center;
+       width:32%;
+     padding: 10px 20px;
+    color: #656973;
+}
+.col2{text-align:center;
+    width:32%;
+  padding: 10px 20px;
+ color: #656973;
+}
+.col3{text-align: center;
+    width:32%;
+  padding: 20px 30px;
+ color: #656973;
+}
+.footer2 .container a{
+    font-size: 17px;
+    color: #E5E6E8;
+}
+ .col1,.col2 h3{
+    font-size: 18px;
+}
+.col2 a:hover,
+.col3 a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+@media(max-width:1024px){
+    .menu-contain{
+        width: 100%;
+    }
+    section{padding: 2rem;}
+}
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+.header{
+    padding: 1.5rem;
+}
+.header .menu span{
+    display: none;
+}
+.news #container{
+    grid-template-columns: repeat(1 ,1fr);
+}
+
+}
+@media(max-width:768px){
+    .top-m{
+        display: none;
+    }
+.social-link, search-area,language-area{
+        display: initial;
+    }
+#skip,.language-area label{
+        display: none;
+    }
+
+.info-blocks {
+ display: grid; 
+       grid-template-columns:repeat(1, 1fr) ; 
+    }  
+.info-blocks .info-block1{
+    height: auto;
+  width: inherit;
+}  
+.info-blocks .info-block2{height: auto;
+    width: inherit;}
+    .info-blocks .info-block3{height: auto;
+        width: inherit;}
+.bottom h5{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.pm-gallery{
+    padding: 0 4rem;
+ grid-template-columns:repeat(1,1fr);
+}
+ #container .news h3 {
+        font-size: 13px; }
+.gallery{
+            grid-template-columns: repeat(1,1fr);
+}
+.gallery.block {
+            height: 100%;
+            width: 100%; } 
+         
+}
+
+@media(max-width:550px){
+ .gallery {
+    width: 100%;
+ }
+ .news-img{
+    width: 100%;
+ }
+ #container .news .news-content{
+    width: auto;
+    float: none;  
+}
+h1{
+    box-sizing: border-box;
+  margin-top: 50px;
+    padding: 20px 15px 15px 15px;
+    position: inherit !important;
+    width: 100%;
+    background: #0D315C;
+}
+h1 a{
+    display: inline-block;
+    width: 155px;
+    position: relative;
+}
+h1 span{
+    font-size: 25px;
+
+}
+.slide h2{
+    width: fit-content;
+}
+.intract .box1 a img, .box2 a img{width: 15rem;}
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+header{
+    padding: 1rem;
+}
+.social-link{display: none;}
+.footer2 .container{
+    max-width: 100%;
+    width: 100%;
+}
+.footer2 .container .col1,.col2,.col3{
+    width: 100%;
+    border-bottom: 1px dashed #333741;
+}
+}
